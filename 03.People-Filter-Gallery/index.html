@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People Filter Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>People Gallery</h1>
+        <p>Search by name, role, or tags — instant filtering with style ✨</p>
+
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search... (try 'designer' or 'anna')"
+          />
+        </div>
+      </header>
+
+      <section id="cardGrid" class="grid"></section>
+      <p id="noResults" class="no-results" style="display: none">
+        No matches found 😕
+      </p>
+
+      <footer>
+        <p>Only HTML, SCSS, and JS • Photos from Unsplash</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

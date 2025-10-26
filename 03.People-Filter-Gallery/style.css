@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  background: linear-gradient(180deg, #0f172a 0%, #0b1220 60%);
+  color: #e6eef8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.header h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+}
+.header p {
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+.header .search-box {
+  display: flex;
+  justify-content: center;
+}
+.header .search-box input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 16px;
+  font-size: 1rem;
+  color: #e6eef8;
+  background: rgba(255, 255, 255, 0.05);
+  outline: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+.header .search-box input:focus {
+  outline-color: rgba(139, 92, 246, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  position: relative;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.8);
+}
+.card .bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+  transition: transform 0.6s ease;
+}
+.card:hover .bg {
+  transform: scale(1.1);
+}
+.card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  color: white;
+}
+.card .overlay .name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.card .overlay .role {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.card .overlay .desc {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+.card .overlay .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.card .overlay .tags span {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.no-results {
+  text-align: center;
+  margin: 2rem 0;
+  opacity: 0.7;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .card {
+    height: 260px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
