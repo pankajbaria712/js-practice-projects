@@ -1,0 +1,116 @@
+// 🎨 Variables
+$primary: #6366f1;
+$primary-dark: #4f46e5;
+$error: #ef4444;
+$success: #22c55e;
+$warning: #f59e0b;
+$info: #3b82f6;
+$bg-gradient: linear-gradient(135deg, #a5b4fc, #93c5fd);
+$font: "Poppins", sans-serif;
+
+// 🌈 Base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  background: $bg-gradient;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #1f2937;
+}
+
+// 📦 Card
+.card {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 460px;
+  animation: fadeIn 0.8s ease forwards;
+
+  h1 {
+    color: $primary-dark;
+    margin-bottom: 0.5rem;
+  }
+  .subtitle {
+    color: #6b7280;
+    margin-bottom: 2rem;
+  }
+}
+
+// 🔘 Button
+.btn-primary {
+  background: $primary;
+  color: white;
+  border: none;
+  padding: 0.8rem 2.8rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 12px rgba(99, 102, 241, 0.4);
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// 📢 Output
+.output {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease 0.2s forwards;
+
+  &.info {
+    background: lighten($info, 45%);
+    color: $info;
+  }
+  &.error {
+    background: lighten($error, 45%);
+    color: $error;
+  }
+  &.success {
+    background: lighten($success, 45%);
+    color: $success;
+  }
+  &.warning {
+    background: lighten($warning, 45%);
+    color: $warning;
+  }
+}
+
+// 🌟 Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: rgba(31, 41, 55, 0.7);
+}
