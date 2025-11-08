@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorful Math Table Generator</title>
+    <!-- Link to Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link to the custom CSS (derived from SCSS) -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="app-container">
+        <h1 class="title">🧮 Math Table Generator</h1>
+
+        <!-- User Feedback/Error Message Area -->
+        <div id="messageBox" class="message-box hidden" role="alert" aria-live="polite"></div>
+
+        <div class="app-layout">
+            <!-- Left Side: Form -->
+            <div class="form-card">
+                <form id="tableForm">
+                    <div class="input-group">
+                        <input
+                            type="number"
+                            id="numberInput"
+                            placeholder="Base Number (e.g., 5)"
+                            required
+                            min="1"
+                            aria-label="Enter the base number for the table"
+                        />
+                        <input
+                            type="number"
+                            id="limitInput"
+                            placeholder="Limit (e.g., 10)"
+                            required
+                            min="1"
+                            aria-label="Enter the multiplication limit"
+                        />
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn primary">
+                            Generate Table
+                        </button>
+                        <button type="button" id="resetBtn" class="btn secondary hidden" aria-label="Reset inputs and clear output">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Side: Output Display Area -->
+            <section id="outputSection" class="output-section hidden" aria-atomic="true">
+                <pre id="outputContent" class="output-content"></pre>
+            </section>
+        </div>
+        
+        <!-- Download Button (full width under the layout) -->
+        <button id="downloadBtn" class="btn download hidden">
+            ⬇ Download Table
+        </button>
+    </main>
+
+    <!-- Link to the JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
