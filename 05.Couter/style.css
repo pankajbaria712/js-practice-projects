@@ -14,11 +14,11 @@ main {
   height: 100vh;
   width: 100vw;
   padding: 2vw;
-  background-color: rgb(48, 41, 92);
+  background: linear-gradient(135deg, #3b1e78, #1f2258);
 }
 
 h1 {
-  color: rgb(246, 132, 1);
+  color: #ffb84d;
   text-align: center;
   font-weight: 900;
   font-size: 4.5vw;
@@ -27,25 +27,58 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
-  gap: 2vw;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5vw;
+  padding: 2vw;
 }
 .container .cards {
-  background-color: rgb(112, 63, 181);
-  border-radius: 10px;
-  border-style: none;
+  background: linear-gradient(145deg, #6a3bd9, #482e9e);
+  border-radius: 12px;
   padding: 1.4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 30vh;
+  color: #f0eaff;
 }
 .container .cards h4 {
   font-size: 1.5rem;
   font-weight: 600;
+  text-align: center;
+  color: #fff6ff;
 }
 .container .cards p {
   font-size: 1.4vw;
   font-weight: 500;
+  text-align: center;
+  color: #d8ccff;
+}
+.container .cards h2 {
+  font-size: 2vw;
+  font-weight: 800;
+  color: #4dffb8;
+}
+
+/* Buttons */
+#inc {
+  background-color: #4a6bff;
+  padding: 0.6vw 1.8vw;
+  border-style: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+}
+
+#dec {
+  background-color: #ff4b6e;
+  padding: 0.6vw 1.8vw;
+  border-style: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.9);
 }/*# sourceMappingURL=style.css.map */

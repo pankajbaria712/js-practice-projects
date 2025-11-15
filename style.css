@@ -1,4 +1,4 @@
-/* Dashboard Styling */
+/* Base Styles */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -8,52 +8,83 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
+  width: 100%;
   padding: 2rem;
   text-align: center;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: #facc15; /* brighter yellow */
 }
 
 p {
   opacity: 0.85;
   margin-bottom: 2rem;
+  font-size: 1.1rem;
 }
 
+/* Projects Grid */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
+/* Project Card */
 .card {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1.8rem;
   text-decoration: none;
   color: #f1f5f9;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.25s ease, background 0.3s;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, background 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 .card h2 {
   margin-top: 0;
-  color: #a78bfa;
+  color: #a78bfa; /* soft purple */
+  font-size: 1.25rem;
 }
 
+.card p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #e0e7ff; /* light lavender */
+}
+
+/* Footer */
 footer {
   margin-top: 3rem;
   font-size: 0.85rem;
   opacity: 0.7;
+  color: #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .projects {
+    gap: 1rem;
+  }
 }
