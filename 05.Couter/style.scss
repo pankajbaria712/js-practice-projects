@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  padding: 2vw;
+  background-color: rgb(48, 41, 92);
+}
+
+h1 {
+  color: rgb(246, 132, 1);
+  text-align: center;
+  font-weight: 900;
+  font-size: 4.5vw;
+  padding-bottom: 1.2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  gap: 2vw;
+
+  .cards {
+    background-color: rgb(112, 63, 181);
+    border-radius: 10px;
+    border-style: none;
+    padding: 1.4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.4vw;
+      font-weight: 500;
+    }
+  }
+}
