@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Piano</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Use Inter font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img id="cursor" src="./image.png" alt="" />
+    <header class="title-bar">
+      <h1>Visual Synth Keyboard</h1>
+      <p class="subtitle">
+        Click or press keys to play — Built with HTML, CSS & JavaScript
+      </p>
+    </header>
+
+    <div class="piano-container">
+      <!-- The keyboard is structured with only two octaves for a mini-project -->
+      <div class="keyboard">
+        <!-- C3 Octave -->
+        <div class="key white" data-note="C1">C</div>
+        <div class="key black" data-note="C2">1</div>
+        <div class="key white" data-note="Ds1">D</div>
+        <div class="key black" data-note="Ds2">2</div>
+        <div class="key white" data-note="fs3">E</div>
+
+        <div class="key white" data-note="Fs1">F</div>
+        <div class="key black" data-note="Fs2">3</div>
+        <div class="key white" data-note="A0">G</div>
+        <div class="key black" data-note="C3">4</div>
+        <div class="key white" data-note="A3">A</div>
+        <div class="key black" data-note="A0">5</div>
+        <div class="key white" data-note="Ds6">B</div>
+
+        <!-- C4 Octave -->
+        <div class="key white" data-note="C3">C</div>
+        <div class="key black" data-note="C4">6</div>
+        <div class="key white" data-note="Ds3">D</div>
+        <div class="key black" data-note="Ds4">7</div>
+        <div class="key white" data-note="fs4">E</div>
+
+        <div class="key white" data-note="Fs6">F</div>
+        <div class="key black" data-note="Fs5">8</div>
+        <div class="key white" data-note="Ds5">G</div>
+        <div class="key black" data-note="Ds6">9</div>
+        <div class="key white" data-note="A4">A</div>
+        <div class="key black" data-note="A1">10</div>
+        <div class="key white" data-note="Fs6">B</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

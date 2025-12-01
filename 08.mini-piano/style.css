@@ -1,0 +1,201 @@
+/* Global Reset and Typography */
+:root {
+  --bg-dark: #121212;
+  --key-dark: #1f1f1f;
+  --key-white: #f0f0f0;
+  --shadow-dark: rgba(0, 0, 0, 0.7);
+  --shadow-white: rgba(0, 0, 0, 0.4);
+  --accent-color: #00bcd4; /* Cyan/Teal */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  cursor: none;
+  background-color: var(--bg-dark);
+  font-family: "Inter", sans-serif;
+  color: var(--key-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Header/Title Styling */
+.title-bar {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-bar h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+.title-bar p {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Piano Container */
+.piano-container {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px var(--shadow-dark);
+  overflow-x: auto; /* Allows horizontal scrolling on very small screens */
+}
+
+/* Keyboard Layout */
+.keyboard {
+  display: flex;
+  position: relative;
+  padding-bottom: 10px; /* Space for key labels */
+}
+
+/* Base Key Styling */
+.key {
+  border-radius: 0 0 5px 5px;
+  transition: transform 0.05s, box-shadow 0.05s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* White Keys */
+.white {
+  width: 80px;
+  height: 300px;
+  background: var(--key-white);
+  border: 1px solid #c4c4c4;
+  border-top: none;
+  z-index: 1;
+  margin-right: -1px; /* Overlap slightly for cleaner look */
+  color: var(--key-dark);
+  box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.1), 0 3px 5px var(--shadow-white);
+}
+
+/* Hover/Active states (Visual only) */
+.white:hover {
+  background: #e0e0e0;
+  transform: translateY(1px);
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1), 0 1px 3px var(--shadow-white);
+}
+
+/* Black Keys */
+.black {
+  width: 50px;
+  height: 180px;
+  background: var(--key-dark);
+  z-index: 2;
+  position: absolute;
+  margin-right: 0;
+  box-shadow: inset 0 -6px 0 rgba(255, 255, 255, 0.1), 0 3px 5px var(--shadow-dark);
+  border: 1px solid #000;
+}
+
+/* Black Key Positioning (Based on which white key they follow) */
+/* C# */
+.key:nth-child(2) {
+  left: 55px;
+} /* after C */
+/* D# */
+.key:nth-child(4) {
+  left: 135px;
+} /* after D */
+/* F# */
+.key:nth-child(7) {
+  left: 295px;
+} /* after F */
+/* G# */
+.key:nth-child(9) {
+  left: 375px;
+} /* after G */
+/* A# */
+.key:nth-child(11) {
+  left: 455px;
+} /* after A */
+/* --- Second Octave (C4) Positioning --- */
+/* C#4 */
+.key:nth-child(14) {
+  left: 615px;
+} /* after C4 */
+/* D#4 */
+.key:nth-child(16) {
+  left: 695px;
+} /* after D4 */
+/* F#4 */
+.key:nth-child(19) {
+  left: 855px;
+} /* after F4 */
+/* G#4 */
+.key:nth-child(21) {
+  left: 935px;
+} /* after G4 */
+/* A#4 */
+.key:nth-child(23) {
+  left: 1015px;
+} /* after A4 */
+/* Black Key Hover/Active states (Visual only) */
+.black:hover {
+  background: #000;
+  transform: translateY(1px);
+  box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.1), 0 1px 3px var(--shadow-dark);
+}
+
+/* Responsive Scaling for Smaller Screens */
+@media (max-width: 768px) {
+  /* Scale down the entire keyboard */
+  .keyboard {
+    transform-origin: top left;
+    transform: scale(0.7); /* Scale down for better fit on tablets/large phones */
+    width: 140%; /* Ensure the scaled element takes up enough space */
+  }
+  .piano-container {
+    padding: 10px;
+    width: 100%;
+  }
+  .title-bar h1 {
+    font-size: 2rem;
+  }
+  .title-bar p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 500px) {
+  /* Further scale down for small mobile devices */
+  .keyboard {
+    transform: scale(0.5);
+    width: 200%;
+  }
+}
+#cursor {
+  z-index: 12;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  pointer-events: none;
+}
+
+.key {
+  transition: transform 0.1s ease;
+}
+
+.key.active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px;
+}/*# sourceMappingURL=style.css.map */
